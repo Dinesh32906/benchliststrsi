@@ -1,0 +1,27 @@
+<!-- technology.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ technology }} - Strategic Systems Bench List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='header_image.png') }}" alt="Header Image">
+        <img src="{{ url_for('static', filename='right_header_image.png') }}" alt="Right Header Image">
+    </div>
+    <div class="content">
+        <h1>{{ technology }} - Strategic Systems Bench List</h1>
+        <ul class="candidate-list">
+            {% for candidate in candidates %}
+                <li><a href="{{ url_for('candidate', candidate=candidate[0]) }}">{{ candidate[0] }}</a></li>
+            {% endfor %}
+        </ul>
+        <a class="back-link" href="{{ url_for('index') }}">Back to Technologies</a>
+    </div>
+    <div class="footer">
+        <img src="{{ url_for('static', filename='body_image.png') }}" alt="Body Image">
+    </div>
+</body>
+</html>

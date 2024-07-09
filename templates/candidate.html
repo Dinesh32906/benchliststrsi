@@ -1,0 +1,56 @@
+<!-- candidate.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ candidate }} - Candidate Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='header_image.png') }}" alt="Header Image">
+        <img src="{{ url_for('static', filename='right_header_image.png') }}" alt="Right Header Image">
+    </div>
+    <div class="content">
+        <h1>{{ candidate }} - Candidate Details</h1>
+        <table>
+            <tr>
+                <th>Full Legal Name</th>
+                <td>{{ details[0] }}</td>
+            </tr>
+            <tr>
+                <th>Technology</th>
+                <td>{{ details[1] }}</td>
+            </tr>
+            <tr>
+                <th>Skill Set</th>
+                <td>{{ details[2] }}</td>
+            </tr>
+            <tr>
+                <th>Relocation</th>
+                <td>{{ details[3] }}</td>
+            </tr>
+            <tr>
+                <th>Current Location</th>
+                <td>{{ details[4] }}</td>
+            </tr>
+            <tr>
+                <th>LinkedIn ID</th>
+                <td><a href="{{ details[5] }}" target="_blank">{{ details[5] }}</a></td>
+            </tr>
+            <tr>
+                <th>Contact Employer</th>
+                <td>{{ details[6] }}</td>
+            </tr>
+            <tr>
+                <th>DISC</th>
+                <td><ul>{% for item in details[7].split('•') if item.strip() %}<li>{{ item.strip() }}</li>{% endfor %}</ul></td>
+            </tr>
+        </table>
+        <a class="back-link" href="{{ url_for('technology', technology=technology) }}">Back to {{ technology }}</a>
+    </div>
+    <div class="footer">
+        <img src="{{ url_for('static', filename='body_image.png') }}" alt="Body Image">
+    </div>
+</body>
+</html>

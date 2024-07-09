@@ -1,0 +1,80 @@
+/* style.css */
+
+body {
+    background-color: #b0e0e6;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+}
+
+.header img {
+    max-height: 50px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #cccccc;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer img {
+    max-height: 50px;
+}
+
+.content {
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #a52a2a;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.back-link {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.technology-list, .candidate-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.technology-list li, .candidate-list li {
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.technology-list li:hover, .candidate-list li:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
